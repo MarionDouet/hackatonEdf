@@ -23,11 +23,11 @@ const HomePage = (props) => {
 
   return (
     <div>
-    <div className="header-container">
-      <img src={logoPrincipal} className="logoPrincipal" />
-      <div>
-        <Nav tabs>
-        <NavItem className="item-nav">
+      <div className="header-container">
+        <img src={logoPrincipal} className="logoPrincipal" />
+        </div>
+          <Nav tabs>
+          <NavItem className="item-nav">
             <NavLink
               className={classnames({ active: activeTab === '1' })}
               onClick={() => { toggle('1'); }}
@@ -44,9 +44,9 @@ const HomePage = (props) => {
         </NavLink>
           </NavItem>
           <NavItem>
-            <NavLink 
+            <NavLink
               className={classnames({ active: activeTab === '3' })}
-              onClick ={() => { toggle('3'); }}
+              onClick={() => { toggle('3'); }}
             >
               Aujourd'hui
         </NavLink>
@@ -64,70 +64,57 @@ const HomePage = (props) => {
               className={classnames({ active: activeTab === '5' })}
               onClick={() => { toggle('5'); }}
             >
-              Map
-        </NavLink>
-          </NavItem>
-          <NavItem>
-            <NavLink
-              className={classnames({ active: activeTab === '6' })}
-              onClick={() => { toggle('6'); }}
-            >
               Contact
         </NavLink>
           </NavItem>
         </Nav>
-      </div>
-
-
+      <TabContent className="fond" activeTab={activeTab}>
+        <TabPane tabId="1">
+          <Row>
+            <Col sm="12">
+              <Environnement />
+              <Text />
+            </Col>
+          </Row>
+        </TabPane>
+        <TabPane tabId="2">
+          <Row>
+            <Col sm="12">
+              <Environnement />
+              <WhatIsIt />
+            </Col>
+          </Row>
+        </TabPane>
+        <TabPane tabId="3">
+          <Row>
+            <Col sm="12">
+            <MapTest />
+            </Col>
+          </Row>
+        </TabPane>
+        <TabPane tabId="4">
+          <Row>
+            <Col sm="12">
+              <Projet />
+            </Col>
+          </Row>
+        </TabPane>
+        <TabPane tabId="5">
+          <Row>
+            <Col sm="12">
+              <Contact />
+            </Col>
+          </Row>
+        </TabPane>
+        <TabPane tabId="6">
+          <Row>
+            <Col sm="12">
+              <Contact />
+            </Col>
+          </Row>
+        </TabPane>
+      </TabContent>
     </div>
-    <TabContent className="fond" activeTab={activeTab}>
-    <TabPane tabId="1">
-        <Row>
-          <Col sm="12">
-            <Environnement />
-            <Text />
-          </Col>
-        </Row>
-      </TabPane>
-      <TabPane tabId="2">
-        <Row>
-          <Col sm="12">
-            <Environnement />
-            <WhatIsIt />
-          </Col>
-        </Row>
-      </TabPane>
-      <TabPane tabId="3">
-        <Row>
-          <Col sm="12">
-            <AboutUs />
-          </Col>
-        </Row>
-      </TabPane>
-      <TabPane tabId="4">
-        <Row>
-          <Col sm="12">
-            <Projet />
-          </Col>
-        </Row>
-      </TabPane>
-      <TabPane tabId="5">
-        <Row>
-          <Col sm="12">
-            <MapTest/>
-          </Col>
-        </Row>
-      </TabPane>
-      <TabPane tabId="6">
-        <Row>
-          <Col sm="12">
-            <Contact />
-          </Col>
-        </Row>
-      </TabPane>
-    </TabContent>
-   
-  </div>
   );
 }
 

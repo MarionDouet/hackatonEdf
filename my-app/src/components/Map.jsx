@@ -1,12 +1,26 @@
 import React from 'react';
-import { Map, TileLayer, Marker, Popup } from 'react-leaflet';
+import { Map, TileLayer, Marker, Popup, Polyline } from 'react-leaflet';
+import {
+  Card, Button, CardHeader, CardFooter, CardBody,
+  CardTitle, CardText
+} from 'reactstrap';
 import L from 'leaflet';
 import 'leaflet/dist/leaflet.css';
 import "./map.css"
 import data from './Data';
+import logoOuv from '../images/Logo-station-ouverte.png';
+import logoFerm from '../images/Logo-station-fermée.png';
+import logoPos from '../images/iconPosition.png';
 
-const myIcon = L.icon({
-  iconUrl: 'https://image.noelshack.com/fichiers/2019/51/4/1576789897-gas-station.png',
+const logoOpen = L.icon({
+  iconUrl: 'https://image.noelshack.com/fichiers/2019/51/5/1576836612-logo-station-ouverte.png',
+  iconSize: [25, 41],
+  iconAnchor: [12.5, 41],
+  popupAnchor: [0, -41]
+});
+
+const logoClose = L.icon({
+  iconUrl: 'https://image.noelshack.com/fichiers/2019/51/5/1576833102-logo-station-fermee.png',
   iconSize: [25, 41],
   iconAnchor: [12.5, 41],
   popupAnchor: [0, -41]
@@ -52,35 +66,61 @@ class MapTest extends React.Component {
     const position = [this.state.lat, this.state.lng];
     const isUserLocation = this.state.haveUsersLocation;
     return (
-      <div className="mapContainer">
-        <h1>la map</h1>
-        <Map center={position} zoom={this.state.zoom} className="map">
-          <TileLayer
-            attribution='&amp;copy <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
-            url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-          />
-          {data.station.map(i => {
-            return (
-              <Marker position={[i.coordinates[1], i.coordinates[0]]} icon={myIcon}>
-                <Popup>
-                  <div className="popup">
-                    <h3>{i.name}</h3>
-                    <h5>{i.open}</h5>
-                    <h5>{i.access}</h5>
-                  </div>
-                </Popup>
-              </Marker>
-            )
-          })}
-          {isUserLocation ? (
-            <Marker position={position} icon={iconPosition}>
-              <Popup>Vous êtes ici.</Popup>
-            </Marker>
-          ) : (
-              ''
-            )}
+      <div className="pageContainer">
+        <div>
+          <h3>Stockable</h3>
+          <p>llllllllllllllllllllllllllllll</p>
+        </div>
 
-        </Map>
+
+        <div className="mapContainer">
+          <h3>Retrouvez nos stations ici</h3>
+          <Map center={position} zoom={this.state.zoom} className="map">
+            <TileLayer
+              attribution='&amp;copy <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+              url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+            />
+            {data.station.map(i => {
+              return (
+                <Marker position={[i.coordinates[1], i.coordinates[0]]} icon={(i.open === 'Ouverte') ? logoOpen : logoClose}>
+                  <Popup>
+                    <div className="popup">
+                      <h4>{i.name}</h4>
+                      <h6 className={(i.open === 'Ouverte') ? 'openColor' : 'closeColor'}>{i.open}</h6>
+                      <h6>{i.access}</h6>
+                    </div>
+                  </Popup>
+                </Marker>
+              )
+            })}
+            {isUserLocation ? (
+              <Marker position={position} icon={iconPosition}>
+                <Popup>Vous êtes ici.</Popup>
+              </Marker>
+            ) : (
+                ''
+              )}
+          </Map>
+          <div className="cardLegend">
+            <Card>
+              <CardHeader>Légende</CardHeader>
+              <CardBody>
+                <div className='legendAlign'>
+                  <img src={logoOuv} className="legendLogo" />
+                  <p className="legendText">Station ouverte</p>
+                </div>
+                <div className='legendAlign'>
+                  <img src={logoFerm} className="legendLogo" />
+                  <p className="legendText">Station fermée</p>
+                </div>
+                <div className='legendAlign'>
+                  <img src={logoPos} className="legendLogo" />
+                  <p className="legendText">Votre position</p>
+                </div>
+              </CardBody>
+            </Card>
+          </div>
+        </div>
       </div>
     )
   }
