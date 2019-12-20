@@ -70,15 +70,15 @@ class MapTest extends React.Component {
         <div className="paragraphContainer">
           <div className="paragraphe">
             <h3>Stockable</h3>
-            <p>is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
+            <p className="phrase">Les avancées technologiques ont rendu possible le stockage de l’hydrogène permettant ainsi une commercialisation sans perte d’énergie. </p>
           </div>
           <div className="paragraphe">
             <h3>Fiable</h3>
-            <p>is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
+            <p className="phrase">Les recherches développées au cours des dernières années ont permis de stabiliser les réactions chimiques inhérentes à l’hydrogène et rendent plus sûre son utilisation. </p>
           </div>
           <div className="paragraphe">
             <h3>Disponible</h3>
-            <p>is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
+            <p className="phrase">Grâce au projet H2piyR, l’hydrogène est une technologie disponible dans votre quotidien avec un réseaux de dix stations entre la France, l’Andorre et l’Espagne. </p>
           </div>
         </div>
         <h3 className="titreMap">Retrouvez nos stations ici</h3>

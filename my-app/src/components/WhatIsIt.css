@@ -1,17 +1,25 @@
 .paragraph {
     margin-top: 5px;
+    width: 50%;
+    margin-left: 70px;
+    
 }
-
+.paragraph1 {
+    margin-bottom: 68px;
+    width: 50%;
+    margin-left: 70px;
+    
+}
 .bigtitle1 {
     padding: 40px 0;
-    text-align: center;
+    text-align: left;
     font-family: montserrat;
     font-weight: bolder;
-    font-size: 72px;
-    margin-left: 200px;
+    font-size: 30px;
+    margin-left: 70px;
+    
 }
 
-.BG{
-    background-image: url("../images/BGwhatisit.jpg");
-    background-size: cover;
+.container {
+    padding: 25px;
 }

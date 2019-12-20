@@ -11,7 +11,9 @@
 .title2{
   font-family: Montserrat;
   margin-right: 400px;
+  margin-left: 400px;
   margin-top: 90px;
+  margin-bottom: 70px;
   font-weight: bolder;
 }
 span{
@@ -19,11 +21,11 @@ span{
 }
 
 .bigtitle{
-  padding: 40px 0;
+  padding: 20px 0;
   text-align: left;
   font-family: montserrat;
   font-weight: bolder;
-  font-size: 72px;
+  font-size: 60px;
   margin-left: 200px;
 }
 

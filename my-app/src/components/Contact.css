@@ -9,11 +9,17 @@
   flex-direction: column;
   justify-content: center;
   font-family: montserrat; 
-  margin-bottom: 70px; 
+  margin-bottom: 70px;
 }
+
 
 .formContact span{
   font-weight: bolder;
+}
+
+.formContact {
+  /* margin-left: 20px; */
+  text-align: center;
 }
 
 .fundacion{
@@ -22,7 +28,9 @@
 
 .formTitle{
   font-weight: bolder;
-  margin: 100px 0;
+  text-align: center;
+  margin-top: 30px;
+  margin-bottom: 30px;
 }
 
 .form-group{
@@ -31,8 +39,8 @@
 }
 
 #buttonForm{
-  margin-right: auto;
-  margin-left: auto;
+  /* margin-right: auto; */
+  margin-left: 525px;
 }
 
 #explication{

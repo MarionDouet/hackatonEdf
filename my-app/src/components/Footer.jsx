@@ -18,7 +18,7 @@ class Footer extends React.Component {
   render() {
     return (
       <div className="footer">
-        <p className="partenaires">Restez informé et réagissez sur nos réseaux sociaux</p>
+        <p className="partenaires">Restez informés et réagissez sur nos réseaux sociaux</p>
         <a href="https://facebook.com"><img className="logos" src={facebook} alt=""/></a>
         <a href="https://twitter.com"><img className="logos" src={twitter} alt=""/></a>
         
