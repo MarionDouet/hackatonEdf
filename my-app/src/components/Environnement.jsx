@@ -1,16 +1,11 @@
 import React from 'react';
+import './environnement.css'
 
 class Environnement extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-
-    }
-  }
 
   render() {
-    return(
-      <div>
+    return (
+      <div className="introContainer">
         
       </div>
     )

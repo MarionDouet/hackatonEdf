@@ -4,11 +4,12 @@ import classnames from 'classnames';
 import Environnement from './Environnement';
 import AboutUs from './AboutUs';
 import Projet from './Projet';
-import Map from './Map';
 import Contact from './Contact';
 import './HomePage.css';
 import Text from './Text';
 import logoPrincipal from '../images/logoPrincipal.jpg';
+import MapTest from './Map';
+
 
 
 
@@ -67,6 +68,8 @@ const HomePage = (props) => {
           </NavItem>
         </Nav>
       </div>
+
+
     </div>
     <TabContent className="fond" activeTab={activeTab}>
       <TabPane tabId="1">
@@ -94,7 +97,7 @@ const HomePage = (props) => {
       <TabPane tabId="4">
         <Row>
           <Col sm="12">
-            <Map/>
+            <MapTest/>
           </Col>
         </Row>
       </TabPane>

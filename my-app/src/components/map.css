@@ -1,0 +1,19 @@
+.mapContainer {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+
+}
+
+.map {
+  height: 480px;
+  width: 90%;
+  border-radius: 25px;
+  margin-left: 5%;
+  margin-bottom: 5%;
+}
+
+.popup {
+  text-align: center;
+  height: 90px;
+}

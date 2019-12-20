@@ -1,0 +1,16 @@
+.logoPrincipal {
+  height: 90px;
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-around;
+}
+
+a {
+  color:#003399;
+}
+
+a:not([href]) {
+  color:#003399;
+}

@@ -1,0 +1,11 @@
+.introContainer {
+  display: flex;
+  flex-direction: column;
+}
+
+.sousContainer {
+  flex-direction: row;
+  justify-content: space-around;
+
+}
+
