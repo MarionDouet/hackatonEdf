@@ -8,6 +8,7 @@ import Text from './Text';
 import logoPrincipal from '../images/logoPrincipal.jpg';
 import MapTest from './Map';
 import WhatIsIt from './WhatIsIt';
+import Demain from './Demain'
 
 const HomePage = (props) => {
   const [activeTab, setActiveTab] = useState('1');
@@ -98,14 +99,14 @@ const HomePage = (props) => {
             </Col>
           </Row>
         </TabPane>
-        <TabPane tabId="5">
+        <TabPane tabId="4">
           <Row>
             <Col sm="12">
-              <Contact />
+              <Demain />
             </Col>
           </Row>
         </TabPane>
-        <TabPane tabId="6">
+        <TabPane tabId="5">
           <Row>
             <Col sm="12">
               <Contact activeFr={activeFr}/>

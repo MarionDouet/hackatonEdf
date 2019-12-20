@@ -3,7 +3,7 @@
 .footer{
   background-color: rgba(255, 255, 255, 0.2);
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-evenly;
   align-items: center;
   width: 100%;
   font-family: montserrat;
@@ -12,7 +12,7 @@
 .logos{
   width: 3em;
   border-radius: 50%;
-  margin: 10px 20px;
+  margin: 5px 5px;
   
 }
 
