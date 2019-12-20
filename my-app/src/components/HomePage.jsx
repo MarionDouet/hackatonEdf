@@ -9,6 +9,7 @@ import './HomePage.css';
 import Text from './Text';
 import logoPrincipal from '../images/logoPrincipal.jpg';
 import MapTest from './Map';
+import WhatIsIt from './WhatIsIt';
 
 
 
@@ -26,28 +27,28 @@ const HomePage = (props) => {
       <img src={logoPrincipal} className="logoPrincipal" />
       <div>
         <Nav tabs>
-          <NavItem className="item-nav">
+        <NavItem className="item-nav">
             <NavLink
               className={classnames({ active: activeTab === '1' })}
               onClick={() => { toggle('1'); }}
+            >
+              Présentation
+        </NavLink>
+          </NavItem>
+          <NavItem className="item-nav">
+            <NavLink
+              className={classnames({ active: activeTab === '2' })}
+              onClick={() => { toggle('2'); }}
             >
               Ce qu'il est
         </NavLink>
           </NavItem>
           <NavItem>
-            <NavLink
-              className={classnames({ active: activeTab === '2' })}
-              onClick={() => { toggle('2'); }}
+            <NavLink 
+              className={classnames({ active: activeTab === '3' })}
+              onClick ={() => { toggle('3'); }}
             >
               Aujourd'hui
-        </NavLink>
-          </NavItem>
-          <NavItem>
-            <NavLink
-              className={classnames({ active: activeTab === '3' })}
-              onClick={() => { toggle('3'); }}
-            >
-              Et demain?
         </NavLink>
           </NavItem>
           <NavItem>
@@ -55,13 +56,21 @@ const HomePage = (props) => {
               className={classnames({ active: activeTab === '4' })}
               onClick={() => { toggle('4'); }}
             >
-              Map
+              Et demain?
         </NavLink>
           </NavItem>
           <NavItem>
             <NavLink
               className={classnames({ active: activeTab === '5' })}
               onClick={() => { toggle('5'); }}
+            >
+              Map
+        </NavLink>
+          </NavItem>
+          <NavItem>
+            <NavLink
+              className={classnames({ active: activeTab === '6' })}
+              onClick={() => { toggle('6'); }}
             >
               Contact
         </NavLink>
@@ -72,7 +81,7 @@ const HomePage = (props) => {
 
     </div>
     <TabContent className="fond" activeTab={activeTab}>
-      <TabPane tabId="1">
+    <TabPane tabId="1">
         <Row>
           <Col sm="12">
             <Environnement />
@@ -83,25 +92,33 @@ const HomePage = (props) => {
       <TabPane tabId="2">
         <Row>
           <Col sm="12">
-            <AboutUs />
+            <Environnement />
+            <WhatIsIt />
           </Col>
         </Row>
       </TabPane>
       <TabPane tabId="3">
         <Row>
           <Col sm="12">
-            <Projet />
+            <AboutUs />
           </Col>
         </Row>
       </TabPane>
       <TabPane tabId="4">
         <Row>
           <Col sm="12">
-            <MapTest/>
+            <Projet />
           </Col>
         </Row>
       </TabPane>
       <TabPane tabId="5">
+        <Row>
+          <Col sm="12">
+            <MapTest/>
+          </Col>
+        </Row>
+      </TabPane>
+      <TabPane tabId="6">
         <Row>
           <Col sm="12">
             <Contact />
