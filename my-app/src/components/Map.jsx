@@ -67,6 +67,10 @@ class MapTest extends React.Component {
     const isUserLocation = this.state.haveUsersLocation;
     return (
       <div className="pageContainer">
+        <div>
+          <h3>Stockable</h3>
+          <p>llllllllllllllllllllllllllllll</p>
+        </div>
 
 
         <div className="mapContainer">
@@ -82,7 +86,7 @@ class MapTest extends React.Component {
                   <Popup>
                     <div className="popup">
                       <h4>{i.name}</h4>
-                      <h6 cliconPositionassName={(i.open === 'Ouverte') ? 'openColor' : 'closeColor'}>{i.open}</h6>
+                      <h6 className={(i.open === 'Ouverte') ? 'openColor' : 'closeColor'}>{i.open}</h6>
                       <h6>{i.access}</h6>
                     </div>
                   </Popup>

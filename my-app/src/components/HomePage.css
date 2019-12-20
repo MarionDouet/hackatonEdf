@@ -19,6 +19,7 @@ span{
 }
 
 .bigtitle{
+  padding: 40px 0;
   text-align: left;
   font-family: montserrat;
   font-weight: bolder;
