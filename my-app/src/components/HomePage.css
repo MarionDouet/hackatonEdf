@@ -2,27 +2,32 @@
 
 .title1{
   padding: 50px 0;
-  font-family: montserrat;
+  font-family: Montserrat;
   margin-left: 400px;
-  
+  font-weight: bolder;
+  margin-top: 60px;
 }
 
 .title2{
-  font-family: montserrat;
+  font-family: Montserrat;
   margin-right: 400px;
+  margin-top: 90px;
+  font-weight: bolder;
 }
 span{
   color: #9FAEE5;
 }
 
 .bigtitle{
-  padding: 100px 0;
+  text-align: left;
   font-family: montserrat;
   font-weight: bolder;
+  font-size: 72px;
+  margin-left: 200px;
 }
 
 .logoPrincipal{
-  width: 6em;
+  width: 9em;
 }
 
 .header-container{

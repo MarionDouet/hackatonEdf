@@ -16,11 +16,11 @@ class Footer extends React.Component {
   render() {
     return (
       <div className="footer">
-        <p></p>
-        <img className="logos" src={edf} alt=""/>
-        <img className="logos" src={fha} alt=""/>
-        <img className="logos" src={occi} alt=""/>
-        <img className="logos" src={imp} alt=""/>
+        <p className="partenaires">Nos partenaires</p>
+        <a href="https://edf.fr"><img className="logos" src={edf} alt=""/></a>
+        <a href="https://hidrogenoaragon.org/en/"><img className="logos" src={fha} alt=""/></a>
+        <a href="https://www.agence-adocc.com"><img className="logos" src={occi} alt=""/></a>
+        <a href="https://ondulia.com"><img className="logos" src={imp} alt=""/></a>
       </div>
     )
     }
