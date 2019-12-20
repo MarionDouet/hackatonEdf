@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+
+.title1{
+  padding: 50px 0;
+  font-family: montserrat;
+  margin-left: 400px;
+  
+}
+
+.title2{
+  font-family: montserrat;
+  margin-right: 400px;
+}
+span{
+  color: #9FAEE5;
+}
+
+.bigtitle{
+  padding: 100px 0;
+  font-family: montserrat;
+  font-weight: bolder;
+}
+
+.logoPrincipal{
+  width: 6em;
+}
+
+.header-container{
+  display: flex;
+  justify-content: space-between;
+  background-color: rgba(255, 255, 255, 0.4);
+}
+
+.nav-item{
+  font-family: montserrat;
+  color:  #9FAEE5;
+  font-weight: bolder;
+  
+}
+
+.fond{
+  background-image: url("../images/Background.jpg");
+  background-size: cover;
+}
+

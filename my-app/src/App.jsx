@@ -1,11 +1,15 @@
 import React from 'react';
 import './App.css';
-import Formu from './components/Formu'
+import HomePage from './components/HomePage';
+import Footer from './components/Footer'
+
+
 
 function App() {
   return (
     <div className="App">
-     <Formu />
+      <HomePage/>
+      <Footer />
     </div>
   );
 }
