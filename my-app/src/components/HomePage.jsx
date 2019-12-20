@@ -5,9 +5,13 @@ import Environnement from './Environnement';
 import AboutUs from './AboutUs';
 import Projet from './Projet';
 import Contact from './Contact';
+import './HomePage.css';
+import Text from './Text';
+import logoPrincipal from '../images/logoPrincipal.jpg';
 import MapTest from './Map';
-import logoPrincipal from '../images/logoPrincipal.jpg'
-import './homePage.css'
+
+
+
 
 const HomePage = (props) => {
   const [activeTab, setActiveTab] = useState('1');
@@ -18,92 +22,98 @@ const HomePage = (props) => {
 
   return (
     <div>
-      <div className="header-container">
-        <img src={logoPrincipal} className="logoPrincipal" />
-        <div>
-          <Nav tabs>
-            <NavItem>
-              <NavLink
-                className={classnames({ active: activeTab === '1' })}
-                onClick={() => { toggle('1'); }}
-              >
-                Environnement
-          </NavLink>
-            </NavItem>
-            <NavItem>
-              <NavLink
-                className={classnames({ active: activeTab === '2' })}
-                onClick={() => { toggle('2'); }}
-              >
-                A propos de nous
-          </NavLink>
-            </NavItem>
-            <NavItem>
-              <NavLink
-                className={classnames({ active: activeTab === '3' })}
-                onClick={() => { toggle('3'); }}
-              >
-                Projet
-          </NavLink>
-            </NavItem>
-            <NavItem>
-              <NavLink
-                className={classnames({ active: activeTab === '4' })}
-                onClick={() => { toggle('4'); }}
-              >
-                Map
-          </NavLink>
-            </NavItem>
-            <NavItem>
-              <NavLink
-                className={classnames({ active: activeTab === '5' })}
-                onClick={() => { toggle('5'); }}
-              >
-                Contact
-          </NavLink>
-            </NavItem>
-          </Nav>
-        </div>
+    <div className="header-container">
+      <img src={logoPrincipal} className="logoPrincipal" />
+      <div>
+        <Nav tabs>
+          <NavItem className="item-nav">
+            <NavLink
+              className={classnames({ active: activeTab === '1' })}
+              onClick={() => { toggle('1'); }}
+            >
+              Ce qu'il est
+        </NavLink>
+          </NavItem>
+          <NavItem>
+            <NavLink
+              className={classnames({ active: activeTab === '2' })}
+              onClick={() => { toggle('2'); }}
+            >
+              Aujourd'hui
+        </NavLink>
+          </NavItem>
+          <NavItem>
+            <NavLink
+              className={classnames({ active: activeTab === '3' })}
+              onClick={() => { toggle('3'); }}
+            >
+              Et demain?
+        </NavLink>
+          </NavItem>
+          <NavItem>
+            <NavLink
+              className={classnames({ active: activeTab === '4' })}
+              onClick={() => { toggle('4'); }}
+            >
+              Map
+        </NavLink>
+          </NavItem>
+          <NavItem>
+            <NavLink
+              className={classnames({ active: activeTab === '5' })}
+              onClick={() => { toggle('5'); }}
+            >
+              Contact
+        </NavLink>
+          </NavItem>
+        </Nav>
       </div>
-      <TabContent activeTab={activeTab}>
-        <TabPane tabId="1">
-          <Row>
-            <Col sm="12">
-              <Environnement />
-            </Col>
-          </Row>
-        </TabPane>
-        <TabPane tabId="2">
-          <Row>
-            <Col sm="12">
-              <AboutUs />
-            </Col>
-          </Row>
-        </TabPane>
-        <TabPane tabId="3">
-          <Row>
-            <Col sm="12">
-              <Projet />
-            </Col>
-          </Row>
-        </TabPane>
-        <TabPane tabId="4">
-          <Row>
-            <Col sm="12">
-              <MapTest />
-            </Col>
-          </Row>
-        </TabPane>
-        <TabPane tabId="5">
-          <Row>
-            <Col sm="12">
-              <Contact />
-            </Col>
-          </Row>
-        </TabPane>
-      </TabContent>
+
+
     </div>
+    <TabContent className="fond" activeTab={activeTab}>
+      <TabPane tabId="1">
+        <Row>
+          <Col sm="12">
+            <Environnement />
+            <Text />
+          </Col>
+        </Row>
+      </TabPane>
+      <TabPane tabId="2">
+        <Row>
+          <Col sm="12">
+            <AboutUs />
+          </Col>
+        </Row>
+      </TabPane>
+      <TabPane tabId="3">
+        <Row>
+          <Col sm="12">
+            <Projet />
+          </Col>
+        </Row>
+      </TabPane>
+      <TabPane tabId="4">
+        <Row>
+          <Col sm="12">
+            <MapTest/>
+          </Col>
+        </Row>
+      </TabPane>
+      <TabPane tabId="5">
+        <Row>
+          <Col sm="12">
+            <Contact />
+          </Col>
+        </Row>
+      </TabPane>
+    </TabContent>
+   
+  </div>
   );
 }
 
 export default HomePage;
+
+

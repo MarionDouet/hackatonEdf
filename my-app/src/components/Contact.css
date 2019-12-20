@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+
+#exampleText{
+  height: 250px;
+}
+
+#formContact{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-family: montserrat; 
+  margin-bottom: 70px; 
+}
+
+.formContact span{
+  font-weight: bolder;
+}
+
+.fundacion{
+  font-size: 20px
+}
+
+.formTitle{
+  font-weight: bolder;
+  margin: 100px 0;
+}
+
+.form-group{
+  display: flex;
+  justify-content: center;
+}
+
+#buttonForm{
+  margin-right: auto;
+  margin-left: auto;
+}
+
+#explication{
+  width: 40%;
+  margin-right: auto;
+  margin-left: auto;
+  text-align: justify;
+  padding: 50px 0;
+}

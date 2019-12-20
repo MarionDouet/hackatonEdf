@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+
+.title1{
+  padding: 50px 0;
+  font-family: Montserrat;
+  margin-left: 400px;
+  font-weight: bolder;
+  margin-top: 60px;
+}
+
+.title2{
+  font-family: Montserrat;
+  margin-right: 400px;
+  margin-top: 90px;
+  font-weight: bolder;
+}
+span{
+  color: #9FAEE5;
+}
+
+.bigtitle{
+  text-align: left;
+  font-family: montserrat;
+  font-weight: bolder;
+  font-size: 72px;
+  margin-left: 200px;
+}
+
+.logoPrincipal{
+  width: 9em;
+}
+
+.header-container{
+  display: flex;
+  justify-content: space-between;
+  background-color: rgba(255, 255, 255, 0.4);
+}
+
+.nav-item{
+  font-family: montserrat;
+  color:  #9FAEE5;
+  font-weight: bolder;
+  
+}
+
+.fond{
+  background-image: url("../images/Background.jpg");
+  background-size: cover;
+}
+
