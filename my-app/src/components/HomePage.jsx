@@ -4,8 +4,10 @@ import classnames from 'classnames';
 import Environnement from './Environnement';
 import AboutUs from './AboutUs';
 import Projet from './Projet';
-import Map from './Map';
 import Contact from './Contact';
+import MapTest from './Map';
+import logoPrincipal from '../images/logoPrincipal.jpg'
+import './homePage.css'
 
 const HomePage = (props) => {
   const [activeTab, setActiveTab] = useState('1');
@@ -16,48 +18,53 @@ const HomePage = (props) => {
 
   return (
     <div>
-      <Nav tabs>
-        <NavItem>
-          <NavLink
-            className={classnames({ active: activeTab === '1' })}
-            onClick={() => { toggle('1'); }}
-          >
-            Environnement
+      <div className="header-container">
+        <img src={logoPrincipal} className="logoPrincipal" />
+        <div>
+          <Nav tabs>
+            <NavItem>
+              <NavLink
+                className={classnames({ active: activeTab === '1' })}
+                onClick={() => { toggle('1'); }}
+              >
+                Environnement
           </NavLink>
-        </NavItem>
-        <NavItem>
-          <NavLink
-            className={classnames({ active: activeTab === '2' })}
-            onClick={() => { toggle('2'); }}
-          >
-            A propos de nous
+            </NavItem>
+            <NavItem>
+              <NavLink
+                className={classnames({ active: activeTab === '2' })}
+                onClick={() => { toggle('2'); }}
+              >
+                A propos de nous
           </NavLink>
-        </NavItem>
-        <NavItem>
-          <NavLink
-            className={classnames({ active: activeTab === '3' })}
-            onClick={() => { toggle('3'); }}
-          >
-            Projet
+            </NavItem>
+            <NavItem>
+              <NavLink
+                className={classnames({ active: activeTab === '3' })}
+                onClick={() => { toggle('3'); }}
+              >
+                Projet
           </NavLink>
-        </NavItem>
-        <NavItem>
-          <NavLink
-            className={classnames({ active: activeTab === '4' })}
-            onClick={() => { toggle('4'); }}
-          >
-            Map
+            </NavItem>
+            <NavItem>
+              <NavLink
+                className={classnames({ active: activeTab === '4' })}
+                onClick={() => { toggle('4'); }}
+              >
+                Map
           </NavLink>
-        </NavItem>
-        <NavItem>
-          <NavLink
-            className={classnames({ active: activeTab === '5' })}
-            onClick={() => { toggle('5'); }}
-          >
-            Contact
+            </NavItem>
+            <NavItem>
+              <NavLink
+                className={classnames({ active: activeTab === '5' })}
+                onClick={() => { toggle('5'); }}
+              >
+                Contact
           </NavLink>
-        </NavItem>
-      </Nav>
+            </NavItem>
+          </Nav>
+        </div>
+      </div>
       <TabContent activeTab={activeTab}>
         <TabPane tabId="1">
           <Row>
@@ -83,11 +90,11 @@ const HomePage = (props) => {
         <TabPane tabId="4">
           <Row>
             <Col sm="12">
-              <Map />
+              <MapTest />
             </Col>
           </Row>
         </TabPane>
-        <TabPane tabId="4">
+        <TabPane tabId="5">
           <Row>
             <Col sm="12">
               <Contact />
