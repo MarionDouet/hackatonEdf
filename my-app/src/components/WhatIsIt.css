@@ -2,7 +2,16 @@
     margin-top: 5px;
 }
 
-.LinkNextPage {
-    background-color: #9FAEE5;
+.bigtitle1 {
+    padding: 40px 0;
+    text-align: center;
     font-family: montserrat;
+    font-weight: bolder;
+    font-size: 72px;
+    margin-left: 200px;
+}
+
+.BG{
+    background-image: url("../images/BGwhatisit.jpg");
+    background-size: cover;
 }
