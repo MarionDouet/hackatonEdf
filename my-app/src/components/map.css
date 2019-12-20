@@ -1,15 +1,33 @@
 .mapContainer {
   display: flex;
   flex-direction: row;
-  align-items: center;
   padding: 10px;
+  justify-content: space-around;
 }
 
 .pageContainer {
 }
 
+.paragraphContainer {
+  display: flex;
+  flex-direction: column;
+}
+
+.paragraphe {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  padding: 8px;
+  margin: 6px;
+  align-items: flex-start;
+}
+
 .cardLegend {
   margin-left: 10px;
+}
+
+.titreMap {
+  margin-left: 14px;
 }
 
 .map {

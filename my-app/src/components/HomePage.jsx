@@ -1,8 +1,6 @@
 import React, { useState } from 'react';
-import { TabContent, TabPane, Nav, NavItem, NavLink, Card, Button, CardTitle, CardText, Row, Col } from 'reactstrap';
+import { TabContent, TabPane, Nav, NavItem, NavLink, Button, Row, Col } from 'reactstrap';
 import classnames from 'classnames';
-import Environnement from './Environnement';
-import AboutUs from './AboutUs';
 import Projet from './Projet';
 import Contact from './Contact';
 import './HomePage.css';
@@ -11,9 +9,6 @@ import logoPrincipal from '../images/logoPrincipal.jpg';
 import MapTest from './Map';
 import WhatIsIt from './WhatIsIt';
 
-
-
-
 const HomePage = (props) => {
   const [activeTab, setActiveTab] = useState('1');
 
@@ -21,81 +16,85 @@ const HomePage = (props) => {
     if (activeTab !== tab) setActiveTab(tab);
   }
 
+  const [activeFr, setLanguage] = useState(true);
+
   return (
     <div>
       <div className="header-container">
         <img src={logoPrincipal} className="logoPrincipal" />
-        </div>
-          <Nav tabs>
+        <Nav tabs>
           <NavItem className="item-nav">
             <NavLink
               className={classnames({ active: activeTab === '1' })}
               onClick={() => { toggle('1'); }}
             >
-              Présentation
-        </NavLink>
+              {(activeFr) ? 'Présentation' : 'Presentación'}
+            </NavLink>
           </NavItem>
           <NavItem className="item-nav">
             <NavLink
               className={classnames({ active: activeTab === '2' })}
               onClick={() => { toggle('2'); }}
             >
-              Ce qu'il est
-        </NavLink>
+              {(activeFr) ? "Ce qu'il est" : 'Que es'}
+            </NavLink>
           </NavItem>
           <NavItem>
             <NavLink
               className={classnames({ active: activeTab === '3' })}
               onClick={() => { toggle('3'); }}
             >
-              Aujourd'hui
-        </NavLink>
+              {(activeFr) ? "Aujourd'hui" : 'Hoy'}
+            </NavLink>
           </NavItem>
           <NavItem>
             <NavLink
               className={classnames({ active: activeTab === '4' })}
               onClick={() => { toggle('4'); }}
             >
-              Et demain?
-        </NavLink>
+              {(activeFr) ? "Et demain?" : 'Mañana'}
+            </NavLink>
           </NavItem>
           <NavItem>
             <NavLink
               className={classnames({ active: activeTab === '5' })}
               onClick={() => { toggle('5'); }}
             >
-              Contact
+              {(activeFr) ? "Contact" : 'Cuntact'}
         </NavLink>
           </NavItem>
         </Nav>
+        <div className="buttonLanguage">
+          <Button color="primary" size="sm" onClick={() => setLanguage(true)} >Français</Button>{' '}
+          <Button color="primary" size="sm" onClick={() => setLanguage(false)}>Espagnol</Button>
+        </div>
+      </div>
       <TabContent className="fond" activeTab={activeTab}>
         <TabPane tabId="1">
           <Row>
             <Col sm="12">
-              <Environnement />
-              <Text />
+              <Text activeFr={activeFr}/>
             </Col>
           </Row>
         </TabPane>
         <TabPane tabId="2">
           <Row>
             <Col sm="12">
-              <Environnement />
-              <WhatIsIt />
+              <WhatIsIt activeFr={activeFr}/>
             </Col>
           </Row>
         </TabPane>
         <TabPane tabId="3">
           <Row>
             <Col sm="12">
-            <MapTest />
+              <MapTest activeFr={activeFr}/>
             </Col>
           </Row>
         </TabPane>
         <TabPane tabId="4">
           <Row>
             <Col sm="12">
-              <Projet />
+              <Projet activeFr={activeFr}/>
             </Col>
           </Row>
         </TabPane>
@@ -109,7 +108,7 @@ const HomePage = (props) => {
         <TabPane tabId="6">
           <Row>
             <Col sm="12">
-              <Contact />
+              <Contact activeFr={activeFr}/>
             </Col>
           </Row>
         </TabPane>

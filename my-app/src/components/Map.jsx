@@ -62,19 +62,28 @@ class MapTest extends React.Component {
     });
   }
 
-  render() {
+  render(props) {
     const position = [this.state.lat, this.state.lng];
     const isUserLocation = this.state.haveUsersLocation;
     return (
       <div className="pageContainer">
-        <div>
-          <h3>Stockable</h3>
-          <p>llllllllllllllllllllllllllllll</p>
+        <div className="paragraphContainer">
+          <div className="paragraphe">
+            <h3>Stockable</h3>
+            <p>is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
+          </div>
+          <div className="paragraphe">
+            <h3>Fiable</h3>
+            <p>is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
+          </div>
+          <div className="paragraphe">
+            <h3>Disponible</h3>
+            <p>is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
+          </div>
         </div>
-
-
+        <h3 className="titreMap">Retrouvez nos stations ici</h3>
         <div className="mapContainer">
-          <h3>Retrouvez nos stations ici</h3>
+
           <Map center={position} zoom={this.state.zoom} className="map">
             <TileLayer
               attribution='&amp;copy <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'

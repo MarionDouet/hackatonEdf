@@ -14,3 +14,8 @@ a {
 a:not([href]) {
   color:#003399;
 }
+
+.buttonLanguage {
+  margin:6px;
+  padding:6px;
+}
