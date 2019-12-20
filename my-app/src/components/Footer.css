@@ -1,14 +1,21 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+
 .footer{
   background-color: rgba(255, 255, 255, 0.2);
   display: flex;
   justify-content: flex-end;
+  align-items: center;
   width: 100%;
-  bottom: 0px;
+  font-family: montserrat;
 }
 
 .logos{
-  width: 4em;
+  width: 3em;
   border-radius: 50%;
-  margin: 5px 5px;
+  margin: 10px 20px;
   
+}
+
+.partenaires{
+  margin-top: 20px;
 }
